@@ -1,37 +1,72 @@
-<div align="center">
+# Stack Overflown
 
-# 🎉 Congratulations ekckevinliu! 🎉
+這是一款以程式設計師為主題的方塊消除遊戲，靈感來自經典 Tetris，但在遊戲內容中融入了「程式錯誤模式」與「開發者文化」元素。
 
-<img src="https://octodex.github.com/images/welcometocat.png" height="200px" />
+玩家需要控制掉落的程式碼方塊，將它們排列成指定的錯誤樣式，成功清除後即可得分。當堆疊過高時，遊戲結束，目標是盡可能在「stack overflow」發生前獲得高分。
 
-### 🌟 You've successfully completed the exercise! 🌟
+## 遊戲特色
 
-## 🚀 Share Your Success!
+- 以程式碼開發場景為主題，方塊顏色代表不同 Dev 元素：
+  - Bug 紅
+  - Function 青
+  - String 橘
+  - Class 紫
+  - Variable 黃
+  - Keyword 藍
+  - Number 綠
+  - Void 黑
+- 每回合都有一個目標錯誤圖樣，玩家必須在板面中拼出相符的 5x5 模式
+- 透過左右移動、旋轉、快速下墜與暫停等操作，打造最適合的消除策略
+- 遊戲結束時會顯示最終分數，鼓勵玩家挑戰更高紀錄
 
-**Show off your new skills and inspire others!**
+## 操作方式
 
-<a href="https://twitter.com/intent/tweet?text=I%20just%20completed%20the%20%22Introduction%20to%20Git%22%20GitHub%20Skills%20hands-on%20exercise!%20%F0%9F%8E%89%0A%0Ahttps%3A%2F%2Fgithub.com%2Fekckevinliu%2FGH900-M01-skills-introduction-to-git%0A%0A%23GitHubSkills%20%23OpenSource%20%23GitHubLearn" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/Share%20on%20X-1da1f2?style=for-the-badge&logo=x&logoColor=white" alt="Share on X" />
-</a>
-<a href="https://bsky.app/intent/compose?text=I%20just%20completed%20the%20%22Introduction%20to%20Git%22%20GitHub%20Skills%20hands-on%20exercise!%20%F0%9F%8E%89%0A%0Ahttps%3A%2F%2Fgithub.com%2Fekckevinliu%2FGH900-M01-skills-introduction-to-git%0A%0A%23GitHubSkills%20%23OpenSource%20%23GitHubLearn" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/Share%20on%20Bluesky-0085ff?style=for-the-badge&logo=bluesky&logoColor=white" alt="Share on Bluesky" />
-</a>
-<a href="https://www.linkedin.com/feed/?shareActive=true&text=I%20just%20completed%20the%20%22Introduction%20to%20Git%22%20GitHub%20Skills%20hands-on%20exercise!%20%F0%9F%8E%89%0A%0Ahttps%3A%2F%2Fgithub.com%2Fekckevinliu%2FGH900-M01-skills-introduction-to-git%0A%0A%23GitHubSkills%20%23OpenSource%20%23GitHubLearn" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/Share%20on%20LinkedIn-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Share on LinkedIn" />
-</a>
+- 左右鍵：移動方塊
+- 上鍵：旋轉方塊
+- 下鍵：軟下墜
+- 空白鍵：硬下墜
+- P：暫停/繼續
 
-### 🎯 What's Next?
+## 遊戲目標
 
-**Keep the momentum going!**
+在每次新圖樣出現時，觀察目標模式，並將掉落中的方塊組合成相同的 5x5 形狀，完成後即消除並加分。只要不讓堆疊到達頂端，便能持續遊戲並追求更高分數。
 
-[![](https://img.shields.io/badge/Return%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/ekckevinliu/GH900-M01-skills-introduction-to-git/issues/1)
-[![GitHub Skills](https://img.shields.io/badge/Explore%20GitHub%20Skills-000000?style=for-the-badge&logo=github&logoColor=white)](https://learn.github.com/skills))
+## 專案結構
 
-*There's no better way to learn than building things!* 🚀
+```text
+mod01/
+├── LICENSE
+├── README.md
+└── src/
+    ├── index.html
+    ├── index.js
+    ├── patterns.js
+    └── style.css
+```
 
-</div>
+## 執行方式
 
----
+這是一個純前端網頁應用，直接在瀏覽器中開啟 `src/index.html` 即可遊玩。
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+如果你想用本地伺服器開啟，也可以在專案根目錄執行：
+
+```bash
+python -m http.server 8000
+```
+
+然後在瀏覽器訪問：
+
+```text
+http://localhost:8000/src/
+```
+
+## 技術說明
+
+- HTML：遊戲畫面與 UI 元件
+- CSS：版面與遊戲風格設計
+- JavaScript：邏輯運算、方塊落下、碰撞判定、模式比對與計分
+
+## 簡短概述
+
+這個 App 是一款「Dev-themed puzzle game」，將程式碼錯誤與方塊遊戲結合，讓玩家在緊湊的遊戲過程中體驗類似修復 bug 的成就感。它既像經典消除遊戲，又帶有開發者主題與趣味性，適合拿來展示前端 JavaScript 遊戲開發能力。
 
